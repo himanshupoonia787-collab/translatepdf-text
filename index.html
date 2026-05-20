@@ -1,0 +1,689 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Free online translator for text and PDF files">
+
+<meta name="keywords" content="translator, pdf translator, hindi to english, language converter">
+
+<meta name="author" content="Global Translate Hub">
+<title> World Translate Hub</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+  body{
+    background:body{
+  background:red;
+}
+    
+}
+
+ 
+
+
+
+header{
+    background:#1565c0;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+.hero{
+    background:white;
+    margin-top:30px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.hero h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+textarea{
+    width:100%;
+    height:160px;
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    margin-top:20px;
+    resize:none;
+}
+
+.selects{
+    display:flex;
+    gap:20px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+select{
+    flex:1;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+button,.upload-btn{
+    padding:14px 20px;
+    border:none;
+    border-radius:10px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button{
+    background:#1565c0;
+}
+
+button:hover{
+    background:#0d47a1;
+}
+
+.upload-btn{
+    background:#2e7d32;
+}
+
+.upload-btn:hover{
+    background:#1b5e20;
+}
+
+input[type=file]{
+    display:none;
+}
+
+.output{
+    background:#e3f2fd;
+    margin-top:25px;
+    padding:20px;
+    border-radius:10px;
+}
+
+.card{
+    background:white;
+    margin-top:30px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+.services{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+footer{
+    background:#1565c0;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1> World Translate Hub</h1>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About Us</a>
+<a href="#services">Services</a>
+<a href="#privacy">Privacy Policy</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section id="home">
+
+<div class="container">
+
+<div class="hero">
+
+<h2>Convert Text & PDF Into 100+ Languages</h2>
+
+<p>
+Translate text and PDF files .
+</p>
+
+<textarea id="inputText" placeholder="Enter your text here..."></textarea>
+
+<div class="selects">
+
+<select id="sourceLanguage"></select>
+
+<select id="targetLanguage"></select>
+
+</div>
+
+<div class="buttons">
+
+<button onclick="translateText()">
+Convert Text
+</button>
+
+<label class="upload-btn">
+Convert PDF
+<input type="file" id="pdfFile" accept="application/pdf" onchange="convertPDF()">
+</label>
+
+</div>
+
+<div class="output">
+
+<h3>Converted Output</h3>
+
+<p id="translatedText">
+Your translated text will appear here...
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<div class="container">
+
+<div class="card">
+
+<h2>About Us</h2>
+
+<p style="margin-top:15px; line-height:28px;">
+ World Translate Hub helps users translate text and PDF documents into multiple world languages quickly and easily.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>How to Translate PDF Files</title>
+
+  <meta name="description" content="Learn how to translate PDF files online easily with step-by-step guide and benefits of PDF translation tools.">
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background:#f4f7fb;
+      margin:0;
+      padding:40px 20px;
+      color:#222;
+    }
+
+    .container{
+      max-width:800px;
+      margin:auto;
+    }
+
+    .dropdown{
+      background:#fff;
+      border-radius:10px;
+      margin-bottom:20px;
+      overflow:hidden;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .dropdown-btn{
+      width:100%;
+      background:#2563eb;
+      color:white;
+      padding:18px;
+      border:none;
+      text-align:left;
+      font-size:20px;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    .dropdown-content{
+      display:none;
+      padding:20px;
+      line-height:1.8;
+      background:#fff;
+    }
+
+    .dropdown-content h2{
+      color:#2563eb;
+      margin-top:20px;
+    }
+
+    ul{
+      padding-left:20px;
+    }
+
+    ol{
+      padding-left:20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Dropdown Section -->
+    <div class="dropdown">
+
+      <button class="dropdown-btn" onclick="toggleDropdown()">
+        How to Translate PDF Files ▼
+      </button>
+
+      <div class="dropdown-content" id="dropdownContent">
+
+        <p>
+          Translating PDF files online is now very easy. You can upload a PDF document and convert it into another language within seconds.
+        </p>
+
+        <p>
+          PDF translators are useful for students, office work, ebooks, research papers, and international communication.
+        </p>
+
+        <h2>Steps to Translate a PDF</h2>
+
+        <ol>
+          <li>Open the PDF translator website.</li>
+          <li>Upload your PDF file.</li>
+          <li>Select the original language.</li>
+          <li>Choose the language you want to translate into.</li>
+          <li>Click the “Translate” button.</li>
+          <li>Download the translated PDF.</li>
+        </ol>
+
+        <h2>Benefits of PDF Translation</h2>
+
+        <ul>
+          <li>Saves time</li>
+          <li>Supports multiple languages</li>
+          <li>Easy for students and professionals</li>
+          <li>Works online without software installation</li>
+        </ul>
+
+        
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- Dropdown Section -->
+<div class="dropdown">
+
+  <button class="dropdown-btn" onclick="toggleTranslatorDropdown()">
+    Best Language Translator ▼
+  </button>
+
+  <div class="dropdown-content" id="translatorDropdown">
+
+    <p>
+      Language translators help users convert text and documents into different languages instantly.
+    </p>
+
+    <p>
+      These tools are useful for students, travelers, businesses, and content creators.
+    </p>
+
+    <h2>Features of a Good Translator</h2>
+
+    <ul>
+      <li>Fast translation speed</li>
+      <li>Accurate results</li>
+      <li>PDF and text support</li>
+      <li>Multiple language options</li>
+      <li>Mobile-friendly interface</li>
+    </ul>
+
+    <h2>Popular Translation Uses</h2>
+
+    <ol>
+      <li>Hindi to English</li>
+      <li>English to French</li>
+      <li>PDF translation</li>
+      <li>Website translation</li>
+      <li>Study material conversion</li>
+    </ol>
+
+  </div>
+</div>
+
+<script>
+  function toggleTranslatorDropdown() {
+    const content = document.getElementById("translatorDropdown");
+
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  }
+</script>
+
+<!-- Dropdown Section -->
+<div class="dropdown">
+
+  <button class="dropdown-btn" onclick="toggleHindiEnglishDropdown()">
+    Hindi to English Translation Guide ▼
+  </button>
+
+  <div class="dropdown-content" id="hindiEnglishContent">
+
+    <p>
+      Hindi to English translation helps users understand English content easily and improve communication skills.
+    </p>
+
+    <p>
+      Online translation tools make this process simple and fast.
+    </p>
+
+    <h2>How to Translate Hindi to English</h2>
+
+    <ol>
+      <li>Enter Hindi text into the translator box.</li>
+      <li>Select Hindi as the source language.</li>
+      <li>Select English as the target language.</li>
+      <li>Click translate.</li>
+      <li>Copy or download the translated text.</li>
+    </ol>
+
+  </div>
+
+</div>
+
+<script>
+  function toggleHindiEnglishDropdown() {
+    const content = document.getElementById("hindiEnglishContent");
+
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  }
+</script>
+
+
+  <script>
+    function toggleDropdown() {
+      const content = document.getElementById("dropdownContent");
+
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<section id="services">
+
+<div class="container">
+
+<h2 style="text-align:center; margin-bottom:20px;">
+Our Services
+</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Text Translation</h3>
+<p style="margin-top:15px;">
+Instant text translation into many languages.
+</p>
+</div>
+
+<div class="card">
+<h3>PDF Translation</h3>
+<p style="margin-top:15px;">
+Upload and convert PDF documents.
+</p>
+</div>
+
+<div class="card">
+<h3>100+ Languages</h3>
+<p style="margin-top:15px;">
+Supports global languages for easy communication.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="privacy">
+
+<div class="container">
+
+<div class="card">
+
+<h2>Privacy Policy</h2>
+
+<p style="margin-top:15px; line-height:28px;">
+Your uploaded files and translated text are processed securely.
+</p>
+
+</div>
+
+</div>
+
+ <section id="contact">
+
+<div class="container">
+
+<div class="card contact-card">
+
+<h2>Contact Us</h2>
+
+<p class="contact-text">
+If you have any questions or suggestions,
+feel free to contact us anytime.
+</p>
+ <form name="contact" method="POST" data-netlify="true"><br><br>
+
+<input type="text" name="name" placeholder="Your Name" required> <br><br>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" placeholder="Write Message" required></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+<p id="successMessage"></p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 World Translate Hub.  </p>
+
+</footer>
+
+<script>
+
+const languages = {
+    "auto":"Detect Language",
+    "en":"English",
+    "hi":"Hindi",
+    "fr":"French",
+    "de":"German",
+    "es":"Spanish",
+    "ar":"Arabic",
+    "ru":"Russian",
+    "zh":"Chinese",
+    "ja":"Japanese",
+    "ko":"Korean",
+    "ta":"Tamil",
+    "te":"Telugu",
+    "mr":"Marathi",
+    "gu":"Gujarati",
+    "pa":"Punjabi",
+    "ur":"Urdu"
+};
+
+const sourceSelect = document.getElementById("sourceLanguage");
+const targetSelect = document.getElementById("targetLanguage");
+
+for(let code in languages){
+
+    sourceSelect.innerHTML +=
+    `<option value="${code}">${languages[code]}</option>`;
+
+    targetSelect.innerHTML +=
+    `<option value="${code}">${languages[code]}</option>`;
+}
+
+sourceSelect.value = "auto";
+targetSelect.value = "hi";
+
+async function translateText(){
+
+    const text = document.getElementById("inputText").value;
+
+    const source = sourceSelect.value;
+
+    const target = targetSelect.value;
+
+    if(text.trim() === ""){
+        alert("Please enter text");
+        return;
+    }
+
+    document.getElementById("translatedText").innerHTML =
+    "Converting...";
+
+    try{
+
+        const url =
+        `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${source}&tl=${target}&dt=t&q=${encodeURIComponent(text)}`;
+
+        const response = await fetch(url);
+
+        const data = await response.json();
+
+        let translated = "";
+
+        data[0].forEach(item=>{
+            translated += item[0];
+        });
+
+        document.getElementById("translatedText").innerHTML =
+        translated;
+
+    }
+
+    catch(error){
+
+        document.getElementById("translatedText").innerHTML =
+        "Translation failed. Internet connection required.";
+
+    }
+
+}
+
+function convertPDF(){
+
+    const file = document.getElementById("pdfFile").files[0];
+
+    const target = languages[targetSelect.value];
+
+    if(!file){
+        alert("Please select PDF file");
+        return;
+    }
+
+    document.getElementById("translatedText").innerHTML =
+    "PDF File <b>" +
+    file.name +
+    "</b> selected for translation into <b>" +
+    target +
+    "</b> language.<br><br>" +
+    "Full PDF translation requires backend API support.";
+
+}
+
+</script>
+
+</body>
+</html>
